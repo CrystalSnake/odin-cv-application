@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import Personal from './Personal';
 
-class Main extends Component {
+class Input extends Component {
   constructor(props) {
     super(props);
   }
@@ -9,10 +8,11 @@ class Main extends Component {
   render() {
     return (
       <div>
-        <Personal />
+        <label>{this.props.label}</label>
+        <input type={this.props.type}></input>
       </div>
     );
   }
 }
 
-export default Main;
+export default Input;
