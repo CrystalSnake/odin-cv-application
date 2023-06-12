@@ -6,10 +6,17 @@ class Input extends Component {
   }
 
   render() {
+    const { type, name, value, label, onChange } = this.props;
     return (
       <div>
-        <label>{this.props.label}</label>
-        <input type={this.props.type}></input>
+        {label && <label htmlFor={name}>{label}</label>}
+        <input
+          type={type}
+          name={name}
+          value={value}
+          placeholder={label}
+          onChange={onChange}
+        />
       </div>
     );
   }

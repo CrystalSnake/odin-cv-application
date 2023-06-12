@@ -8,9 +8,7 @@ class CVPreview extends Component {
   render() {
     return (
       <div>
-        <div></div>
-        <div></div>
-        <div></div>
+        <p></p>
       </div>
     );
   }

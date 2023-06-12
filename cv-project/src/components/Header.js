@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Personal from './Personal';
 
 class Header extends Component {
   constructor(props) {
