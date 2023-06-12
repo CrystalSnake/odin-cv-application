@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import Personal from './Personal';
-import Education from './Education';
+import CVForm from './CVForm';
+import CVPreview from './CVPreview';
+import Footer from './Footer';
 
 class Main extends Component {
   constructor(props) {
@@ -10,8 +11,8 @@ class Main extends Component {
   render() {
     return (
       <div>
-        <Personal />
-        <Education />
+        <CVForm />
+        <CVPreview />
       </div>
     );
   }
