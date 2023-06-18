@@ -1,18 +1,14 @@
 import React, { Component } from 'react';
 import Header from './components/Header';
-import Main from './components/Main';
+import CV from './components/CV';
 import Footer from './components/Footer';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <div className="App">
         <Header title="CV Application" />
-        <Main />
+        <CV />
         <Footer />
       </div>
     );

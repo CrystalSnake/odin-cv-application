@@ -4,18 +4,12 @@ import Input from './Input';
 class CVForm extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      inputValue: '',
-    };
-    this.handleInputChange = this.handleInputChange.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
-  handleInputChange(event) {
-    const target = event.target;
-    const value = target.value;
-    this.setState({
-      inputValue: value,
-    });
+  handleChange(event) {
+    const newData = { [event.target.name]: event.target.value };
+    this.props.handleInputChange(newData);
   }
 
   render() {
@@ -26,30 +20,94 @@ class CVForm extends Component {
           <Input
             label="First name"
             type="text"
-            value={this.state.inputValue}
-            placeholder="Enter value"
-            onChange={this.handleInputChange}
+            name="firstName"
+            onChange={this.handleChange}
           />
-          <Input label="Last name" type="text" />
-          <Input label="E-mail" type="email" />
-          <Input label="Phone number" type="phone" />
+          <Input
+            label="Last name"
+            type="text"
+            name="lastName"
+            onChange={this.handleChange}
+          />
+          <Input
+            label="E-mail"
+            type="email"
+            name="eMail"
+            onChange={this.handleChange}
+          />
+          <Input
+            label="Phone number"
+            type="phone"
+            name="phoneNumber"
+            onChange={this.handleChange}
+          />
         </div>
         <div>
           <h3>Education</h3>
-          <Input label="University name" type="text" />
-          <Input label="City" type="text" />
-          <Input label="Degree" type="text" />
-          <Input label="From" type="number" />
-          <Input label="To" type="number" />
+          <Input
+            label="University name"
+            type="text"
+            name="universityName"
+            onChange={this.handleChange}
+          />
+          <Input
+            label="City"
+            type="text"
+            name="universityCity"
+            onChange={this.handleChange}
+          />
+          <Input
+            label="Degree"
+            type="text"
+            name="degree"
+            onChange={this.handleChange}
+          />
+          <Input
+            label="From"
+            type="number"
+            name="universityFrom"
+            onChange={this.handleChange}
+          />
+          <Input
+            label="To"
+            type="number"
+            name="universityTo"
+            onChange={this.handleChange}
+          />
           <button>Add</button>
         </div>
         <div>
           <h3>Experience</h3>
-          <Input label="Company" type="text" />
-          <Input label="City" type="text" />
-          <Input label="Position" type="text" />
-          <Input label="From" type="number" />
-          <Input label="To" type="number" />
+          <Input
+            label="Company"
+            type="text"
+            name="companyName"
+            onChange={this.handleChange}
+          />
+          <Input
+            label="City"
+            type="text"
+            name="companyCity"
+            onChange={this.handleChange}
+          />
+          <Input
+            label="Position"
+            type="text"
+            name="position"
+            onChange={this.handleChange}
+          />
+          <Input
+            label="From"
+            type="number"
+            name="companyFrom"
+            onChange={this.handleChange}
+          />
+          <Input
+            label="To"
+            type="number"
+            name="companyTo"
+            onChange={this.handleChange}
+          />
           <button>Add</button>
         </div>
         <button>Reset</button>
