@@ -110,7 +110,7 @@ class CVForm extends Component {
           />
           <button>Add</button>
         </div>
-        <button>Reset</button>
+        <button onClick={() => this.props.handleResetButton()}>Reset</button>
       </div>
     );
   }

@@ -22,10 +22,30 @@ class CV extends Component {
       companyTo: '',
     };
     this.handleInputChange = this.handleInputChange.bind(this);
+    this.handleResetButton = this.handleResetButton.bind(this);
   }
 
   handleInputChange(newData) {
     this.setState(newData);
+  }
+
+  handleResetButton() {
+    this.setState({
+      firstName: '',
+      lastName: '',
+      eMail: '',
+      phoneNumber: '',
+      universityName: '',
+      universityCity: '',
+      degree: '',
+      universityFrom: '',
+      universityTo: '',
+      companyName: '',
+      companyCity: '',
+      position: '',
+      companyFrom: '',
+      companyTo: '',
+    });
   }
 
   render() {
@@ -47,7 +67,10 @@ class CV extends Component {
     } = this.state;
     return (
       <div>
-        <CVForm handleInputChange={this.handleInputChange} />
+        <CVForm
+          handleInputChange={this.handleInputChange}
+          handleResetButton={this.handleResetButton}
+        />
         <h2>CV Preview</h2>
         <CVPreview
           firstName={firstName}
