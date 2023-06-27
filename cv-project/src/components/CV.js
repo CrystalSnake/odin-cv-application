@@ -46,6 +46,7 @@ class CV extends Component {
       companyFrom: '',
       companyTo: '',
     });
+    document.querySelector('form').reset();
   }
 
   render() {
