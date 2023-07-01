@@ -67,12 +67,12 @@ class CV extends Component {
       companyTo,
     } = this.state;
     return (
-      <div>
+      <div className="grid lg:grid-cols-2 gap-10 w-full max-w-screen-2xl m-auto px-10 my-5">
         <CVForm
           handleInputChange={this.handleInputChange}
           handleResetButton={this.handleResetButton}
         />
-        <h2>CV Preview</h2>
+
         <CVPreview
           firstName={firstName}
           lastName={lastName}

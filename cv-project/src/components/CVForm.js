@@ -16,7 +16,7 @@ class CVForm extends Component {
     return (
       <div>
         <form>
-          <div>
+          <div className="mb-2">
             <h3>Personal information</h3>
             <Input
               label="First name"
@@ -38,12 +38,10 @@ class CVForm extends Component {
             />
             <Input
               label="Phone number"
-              type="phone"
+              type="tel"
               name="phoneNumber"
               onChange={this.handleChange}
             />
-          </div>
-          <div>
             <h3>Education</h3>
             <Input
               label="University name"
@@ -63,20 +61,20 @@ class CVForm extends Component {
               name="degree"
               onChange={this.handleChange}
             />
-            <Input
-              label="From"
-              type="number"
-              name="universityFrom"
-              onChange={this.handleChange}
-            />
-            <Input
-              label="To"
-              type="number"
-              name="universityTo"
-              onChange={this.handleChange}
-            />
-          </div>
-          <div>
+            <div className="flex gap-3 w-40">
+              <Input
+                label="From"
+                type="number"
+                name="universityFrom"
+                onChange={this.handleChange}
+              />
+              <Input
+                label="To"
+                type="number"
+                name="universityTo"
+                onChange={this.handleChange}
+              />
+            </div>
             <h3>Experience</h3>
             <Input
               label="Company"
@@ -96,20 +94,27 @@ class CVForm extends Component {
               name="position"
               onChange={this.handleChange}
             />
-            <Input
-              label="From"
-              type="number"
-              name="companyFrom"
-              onChange={this.handleChange}
-            />
-            <Input
-              label="To"
-              type="number"
-              name="companyTo"
-              onChange={this.handleChange}
-            />
+            <div className="flex gap-3 w-40">
+              <Input
+                label="From"
+                type="number"
+                name="companyFrom"
+                onChange={this.handleChange}
+              />
+              <Input
+                label="To"
+                type="number"
+                name="companyTo"
+                onChange={this.handleChange}
+              />
+            </div>
           </div>
-          <button onClick={() => this.props.handleResetButton()}>Reset</button>
+          <button
+            className="rounded-md border transition ease-in-out delay-10 bg-red-900 hover:bg-red-700 text-white px-3 py-1 py-0.5"
+            onClick={() => this.props.handleResetButton()}
+          >
+            Reset
+          </button>
         </form>
       </div>
     );

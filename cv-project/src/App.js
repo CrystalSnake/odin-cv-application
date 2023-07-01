@@ -6,10 +6,10 @@ import Footer from './components/Footer';
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div className="App grid min-h-screen grid-rows-[min-content,auto,min-content]">
         <Header title="CV Application" />
-        <CV />
-        <Footer />
+        <CV className="my-5" />
+        <Footer className="row-end-2" />
       </div>
     );
   }
