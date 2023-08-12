@@ -2,45 +2,32 @@ import React, { useState } from 'react';
 import CVForm from './CVForm';
 import CVPreview from './CVPreview';
 
+const INITIAL_STATE = {
+  firstName: '',
+  lastName: '',
+  eMail: '',
+  phoneNumber: '',
+  universityName: '',
+  universityCity: '',
+  degree: '',
+  universityFrom: '',
+  universityTo: '',
+  companyName: '',
+  companyCity: '',
+  position: '',
+  companyFrom: '',
+  companyTo: '',
+};
+
 export default function CV() {
-  const [state, setState] = useState({
-    firstName: '',
-    lastName: '',
-    eMail: '',
-    phoneNumber: '',
-    universityName: '',
-    universityCity: '',
-    degree: '',
-    universityFrom: '',
-    universityTo: '',
-    companyName: '',
-    companyCity: '',
-    position: '',
-    companyFrom: '',
-    companyTo: '',
-  });
+  const [state, setState] = useState(INITIAL_STATE);
 
   const handleInputChange = (newData) => {
     setState((prevState) => ({ ...prevState, ...newData }));
   };
 
   const handleResetButton = () => {
-    setState({
-      firstName: '',
-      lastName: '',
-      eMail: '',
-      phoneNumber: '',
-      universityName: '',
-      universityCity: '',
-      degree: '',
-      universityFrom: '',
-      universityTo: '',
-      companyName: '',
-      companyCity: '',
-      position: '',
-      companyFrom: '',
-      companyTo: '',
-    });
+    setState(INITIAL_STATE);
     document.querySelector('form').reset();
   };
 
