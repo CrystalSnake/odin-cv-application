@@ -67,7 +67,7 @@ class CV extends Component {
       companyTo,
     } = this.state;
     return (
-      <div className="grid lg:grid-cols-2 gap-10 w-full max-w-screen-2xl m-auto px-10 my-5">
+      <div className="tw-grid tw-lg:grid-cols-2 tw-gap-10 tw-w-full max-w-screen-2xl tw-m-auto tw-px-10 tw-my-5">
         <CVForm
           handleInputChange={this.handleInputChange}
           handleResetButton={this.handleResetButton}

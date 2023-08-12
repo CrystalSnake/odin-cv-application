@@ -16,7 +16,7 @@ class CVForm extends Component {
     return (
       <div>
         <form>
-          <div className="mb-2">
+          <div className="tw-mb-2">
             <h3>Personal information</h3>
             <Input
               label="First name"
@@ -61,7 +61,7 @@ class CVForm extends Component {
               name="degree"
               onChange={this.handleChange}
             />
-            <div className="flex gap-3 w-40">
+            <div className="tw-flex tw-gap-3 tw-w-40">
               <Input
                 label="From"
                 type="number"
@@ -94,7 +94,7 @@ class CVForm extends Component {
               name="position"
               onChange={this.handleChange}
             />
-            <div className="flex gap-3 w-40">
+            <div className="tw-flex tw-gap-3 tw-w-40">
               <Input
                 label="From"
                 type="number"
@@ -110,7 +110,7 @@ class CVForm extends Component {
             </div>
           </div>
           <button
-            className="rounded-md border transition ease-in-out delay-10 bg-red-900 hover:bg-red-700 text-white px-3 py-1 py-0.5"
+            className="tw-rounded-md tw-border tw-transition tw-ease-in-out delay-10 tw-bg-red-900 tw-hover:bg-red-700 tw-text-white tw-px-3 tw-py-0.5"
             onClick={() => this.props.handleResetButton()}
           >
             Reset
