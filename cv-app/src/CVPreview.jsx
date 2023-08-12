@@ -22,7 +22,7 @@ class CVPreview extends Component {
       <div>
         <h2 className="tw-pl-3">CV Preview</h2>
         <div className="tw-bg-gray-200 tw-drop-shadow-md tw-rounded-md">
-          <div className="tw-bg-blue-500 tw-rounded-t-md tw-preview-block">
+          <div className="tw-bg-blue-500 tw-rounded-t-md preview-block">
             <p className="tw-text-xl tw-font-semibold">
               {firstName} {lastName}
             </p>
